@@ -57,14 +57,14 @@ export default class App extends Component {
   }
   
   render() {
-    const {list, loading} = this.props.ProductStore.data;
+    const {list} = this.props.ProductStore.data;
     return (
       <div className={styles.homebox}>
         <Link className={styles.newItem} to={`/creatItem/`}>Create New Item</Link>
         {list && list.length > 0 && 
           <Table
             dataSource={list.slice()}
-            loading={loading}
+            // loading={loading}
             size="small"
             columns={this.dataColumns}
             pagination={false}
