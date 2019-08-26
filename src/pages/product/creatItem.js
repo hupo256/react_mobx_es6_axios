@@ -8,9 +8,9 @@ const formItemBtn = {
   wrapperCol: { span: 8, offset: 4, },
 };
 
+@Form.create()
 @inject('ProductStore')
 @observer
-@Form.create()
 class CreatItem extends Component {
   toCreate = () => {
     const { history, form:{validateFields},  ProductStore:{creatItem, data}} = this.props;
@@ -18,7 +18,6 @@ class CreatItem extends Component {
       if(!errors) {
         creatItem(data.currItem).then(rs => {
           console.log(rs);
-          return;
           history.push(`/details/${rs.data.id}`)
         });
       }
@@ -26,7 +25,6 @@ class CreatItem extends Component {
   }
 
   render() {
-    const { getFieldDecorator } = this.props.form;
     return (
       <Form layout="horizontal">
         <InpList {...this.props} />

@@ -18,7 +18,6 @@ class ProductStore {
 	@action
 	updateCurrItem = (obj) => {
 		Object.assign(this.data.currItem, obj);
-		// console.log(this.data.currItem);
 	}
 
 	@action
@@ -38,12 +37,15 @@ class ProductStore {
 
 	@action
 	getItem = async (id) => {
+		this.data.loading = true;
 		try {
 			const item = await ProApi.getItem(id);
 			runInAction(() => {
 				this.data.currItem = item;
+				this.data.loading = false;
 			})
 		} catch {
+			this.data.loading = false;
 			console.log(err);
 		}
 	}

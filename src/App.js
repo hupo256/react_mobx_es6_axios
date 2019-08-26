@@ -13,15 +13,15 @@ import styles from './App.less';
 
 export default (props) => {
     return (
-        <div className={ styles.app }>
+        <div className={styles.app}>
             <Switch>
-                <Route exact path='/' component={ Home } />
-                <Route path='/settings' component={ Settings } />
-                <Route path='/display' component={ Display } />
-                <Route path='/product' component={ Product } />
-                <Route path='/details' component={ Details } />
-                <Route path='/creatItem' component={ CreatItem } />
-                <Route component={ NotFound } />
+                <Route exact path='/' component={Home} />
+                <Route path='/settings' component={Settings} />
+                <Route path='/display' component={Display} />
+                <Route path='/product' component={Product} />
+                <Route path='/details' component={Details} />
+                <Route path='/creatItem' component={CreatItem} />
+                <Route component={NotFound} />
             </Switch>
         </div>
     )

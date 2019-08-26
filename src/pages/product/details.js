@@ -4,21 +4,21 @@ import { Button, Form, Input } from 'antd';
 import InpList from './InpList';
 
 const Attr = ['model', 'brand', 'weight', 'manufactureDate'];
+@Form.create()
 @inject('ProductStore')
 @observer
-@Form.create()
 class Details extends Component {
   state = {
     editItem: false,
   }
 
   componentDidMount() {
-    const id = window.location.href.split('details/')[1];
-    this.props.ProductStore.getItem(id);
+    this.getCurrItem();
   }
 
-  componentDidUpdate() {
-    console.log(22);
+  getCurrItem = () => {
+    const id = window.location.href.split('details/')[1];
+    this.props.ProductStore.getItem(id);
   }
 
   toEdit = () => {
@@ -44,7 +44,6 @@ class Details extends Component {
     return(
       <>
         {!editItem && Attr.map((key) => {
-          // console.log(key, currItem[key]);
           const val = currItem ? (currItem[key] ? currItem[key] : '') : '';
           return <p key={key}>{`${key}: ${val}`}</p>
         })}
