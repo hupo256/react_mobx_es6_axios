@@ -40,14 +40,6 @@ export default (props) => {
 //   state = {
 //     showText: true
 //   }
-
-//   componentWillReceiveProps(nextPorps){
-//     console.log(nextPorps);
-//   }
-
-//   componentDidMount(){
-//     console.log(this.props)
-//   }
   
 //   toggleShow = () =>{
 //     this.setState({
