@@ -38,7 +38,8 @@ export default (props) => {
 // @observer
 // export default class App extends React.Component {
 //   state = {
-//     showText: true
+//     showText: true,
+// bool: false
 //   }
   
 //   toggleShow = () =>{
@@ -48,7 +49,7 @@ export default (props) => {
 
 //     this.props.globalModel.changeUserName('jackson !')
 
-//     // const list = HomeApi.getList().then(rs => console.log(rs));
+//   // const list = HomeApi.getList().then(rs => console.log(rs));
 //   }
 
 //   render() {
