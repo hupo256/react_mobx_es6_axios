@@ -4,7 +4,8 @@ import { observer, inject } from "mobx-react";
 import { Button, Table, Modal } from "antd";
 
 // import styles from '../page.less';
-import styles from "../page.css";
+// import styles from "../page.css";
+import styles from "../page.scss";
 
 @inject("ProductStore")
 @observer
