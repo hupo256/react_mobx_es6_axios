@@ -24,16 +24,6 @@ const config = merge(common, {
         inline: true,
         // 展示的统计信息
         stats: 'errors-only',
-        // 配置代理
-        proxy: {
-            '/api': {
-                changeOrigin: true,
-                target: 'https://easy-mock.com/mock/5c2dc9665cfaa5209116fa40/example',
-                pathRewrite: {
-                    '^/api/': '/'
-                }
-            }
-        }
     },
     plugins: [
         // 热加载插件
